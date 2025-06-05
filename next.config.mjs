@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -7,30 +8,12 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: [
-      'placeholder.svg',
-      'blob.v0.dev',
-      'lh3.googleusercontent.com',
-      'supabase.co',
-      'your-supabase-project.supabase.co'
-    ],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**.supabase.co',
-      },
-      {
-        protocol: 'https',
-        hostname: 'blob.v0.dev',
-      }
-    ],
+    domains: ['bhswiskeqgfxsqtnvrpi.supabase.co', 'lh3.googleusercontent.com'],
     unoptimized: true,
   },
   experimental: {
-    serverActions: {
-      allowedOrigins: ['localhost:3000', '*.vercel.app']
-    }
-  }
+    serverActions: true,
+  },
 }
 
 export default nextConfig
